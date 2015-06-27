@@ -1,0 +1,32 @@
+{
+  "tableName":"SCHOOL_USERS",
+  "columns":
+    [
+      {
+        "name":"ID",
+        "type":"INTEGER",
+        "length":"0",
+        "notNull":"true",
+        "primaryKey":"true",
+        "defaultValue":""
+      }
+      ,
+      {
+        "name":"USERNAME",
+        "type":"VARCHAR",
+        "length":"20",
+        "notNull":"true",
+        "primaryKey":"false",
+        "defaultValue":""
+      }
+      ,
+      {
+        "name":"USER_TYPE",
+        "type":"INTEGER",
+        "length":"0",
+        "notNull":"true",
+        "primaryKey":"false",
+        "defaultValue":""
+      }
+    ]
+}
