@@ -26,17 +26,15 @@
 			<table class="table table-condensed">
 				<thead>
 					<tr>
-						<th>id</th>
-						<th>username</th>
-						<th>user_type</th>
+						<th>Username</th>
+						<th>User Type</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr class="selected-{{entry._selected_}}" ng-repeat="entry in data"
 						ng-click="showInfoForEntry(entry)">
-						<td>{{entry.id}}</td> 
 						<td>{{entry.username}}</td> 
-						<td>{{entry.user_type}}</td> 
+						<td>{{userTypes[entry.user_type - 1].type}}</td> 
 					</tr>
 				</tbody>
 			</table>
@@ -56,44 +54,35 @@
 			<br> <br>
 			<div>
 				<div ng-show="operation == 'show'">
-					<label>id</label>
-					<input type="text" class="form-control"
-						ng-model="selectedEntry.id" readonly>
-					<br> 
-					<label>username</label>
+					<label>Username</label>
 					<input type="text" class="form-control"
 						ng-model="selectedEntry.username" readonly>
 					<br> 
-					<label>user_type</label>
+					<label>User Type</label>
 					<input type="text" class="form-control"
-						ng-model="selectedEntry.user_type" readonly>
+						ng-model="userTypes[selectedEntry.user_type - 1].type" readonly>
 					<br> 
 				</div>
 				<div ng-show="operation == 'new'">
-					<label>id</label> 
-					<input type="text"
-						class="form-control" value="Auto Generated" readonly> <br>
-					<label>username</label> 
+					<label>Username</label> 
 					<input type="text" class="form-control" 
 						ng-model="newEntry.username">
 					<br>
-					<label>user_type</label> 
-					<input type="text" class="form-control" 
-						ng-model="newEntry.user_type">
-					<br>
+					<label>User Type</label>
+					<select class="form-control" ng-model="newEntry.user_type">
+                      <option ng-repeat="userType in userTypes" value="{{userType.id}}">{{userType.type}}</option>
+                    </select>
+                    <br>
 				</div>
 				<div ng-show="operation == 'update'">
-					<label>id</label>
-					<input type="text" class="form-control" 
-						ng-model="selectedEntry.id" readonly>
-					<br> 
-					<label>username</label> 
+					<label>Username</label> 
 					<input type="text" class="form-control"
 						ng-model="selectedEntry.username"> 
 					<br>
-					<label>user_type</label> 
-					<input type="text" class="form-control"
-						ng-model="selectedEntry.user_type"> 
+					<label>User Type</label>
+					<select class="form-control" ng-model="selectedEntry.user_type">
+                      <option ng-repeat="userType in userTypes" value="{{userType.id}}">{{userType.type}}</option>
+                    </select>
 					<br>
 				</div>
 				<div class="btn-group">
@@ -113,10 +102,16 @@
 		function ManageController($scope, $http){
 			
 			var url = '../../../js/Robosoft/principal/school_users.js';
+			var userTypesUrl = '../../../js/Robosoft/principal/user_types.js';
 			
 			$http.get(url)
 			.success(function(data){
 				$scope.data = data;
+			});
+			
+			$http.get(userTypesUrl)
+			.success(function(data){
+				$scope.userTypes = data;
 			});
 			
 			$scope.selectedEntry;
