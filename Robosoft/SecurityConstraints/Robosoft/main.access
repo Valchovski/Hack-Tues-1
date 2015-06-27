@@ -12,5 +12,19 @@
       [
         {"role":"Parent"}
       ]
+  },
+  {
+    "location":"/Robosoft/student",
+    "roles":
+      [
+        {"role":"Student"}
+      ]
+  },
+  {
+    "location":"/Robosoft/teacher",
+    "roles":
+      [
+        {"role":"Teacher"}
+      ]
   }
 ]

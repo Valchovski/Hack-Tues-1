@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Home",
+        "link": "index.html",
+        "subMenu": []
+    },
+    {
+        "name": "Input Grades",
+        "link": "grades.html",
+        "subMenu": []
+    }
+]

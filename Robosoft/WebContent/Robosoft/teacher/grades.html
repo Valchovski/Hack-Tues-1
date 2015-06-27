@@ -1,0 +1,82 @@
+	<div id="wrap" ng-app ng-controller="ManageController">
+		<div class="container">
+			<div class="alert alert-danger" ng-show="errorMessage">
+				{{errorMessage}}</div>
+			<!--<table class="table table-condensed">
+				<thead>
+					<tr>
+						<th>Grade</th>
+						<th>Speciality</th>
+						<th>Class Leader</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="selected-{{entry._selected_}}" ng-repeat="entry in data"
+						ng-click="showInfoForEntry(entry)">
+						<td>{{entry.grade}}</td> 
+						<td>{{entry.speciality}}</td> 
+						<td>{{entry.class_leader}}</td> 
+					</tr>
+				</tbody>
+			</table>-->
+			<ul class="unstyled">
+			    <li ng-repeat="entry in data">
+			        <a href="class.html?class={{entry.id}}">{{entry.grade}} {{entry.speciality}}</a>
+			    </li>
+			</ul>
+		</div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular-resource.min.js"></script>
+    
+    <script type="text/javascript">
+		function ManageController($scope, $http){
+			
+			var url = '../../../js-secured/Robosoft/teacher/grades.js';
+			$http.get(url)
+			.success(function(data){
+				$scope.data = data;
+			});
+			
+			$scope.selectedEntry;
+            $scope.operation = 'show';
+            $scope.newEntry = null;
+            $scope.errorMessage = null;
+			
+			$scope.showInfoForEntry = function(entry) {
+				if($scope.operation==='show'){
+					if($scope.selectedEntry === entry){
+						$scope.showEntry = false;
+						$scope.selectedEntry = null;
+						entry._selected_ = false;
+					}else{
+						for(var i = 0 ; i < $scope.data.length; i ++){
+							$scope.data[i]._selected_ = false;
+						}
+						entry._selected_ = true;
+						$scope.showEntry = true;
+						$scope.selectedEntry = entry;
+					}
+				}
+			}
+
+            $scope.cancelAction = function(){
+                refreshData();
+            }
+                    
+			function refreshData(){
+				$http.get(url)
+				.success(function(data){
+					$scope.data = data;
+                	$scope.newEntry = null;
+                    $scope.selectedEntry = null;
+                    $scope.operation = 'show';
+                    $scope.errorMessage = null;
+				})
+				.error(function(response){
+					$scope.errorMessage = response.err.message;
+				});
+			}
+		}
+	</script>
