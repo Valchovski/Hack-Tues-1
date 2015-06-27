@@ -8,5 +8,10 @@
         "name": "Subject Management",
         "link": "subjects.html",
         "subMenu": []
+    },
+    {
+        "name": "Classes Management",
+        "link": "grades.html",
+        "subMenu": []
     }
 ]

@@ -5,5 +5,12 @@
       [
         {"role":"Principal"}
       ]
+  },
+  {
+    "location":"/Robosoft/parent",
+    "roles":
+      [
+        {"role":"Parent"}
+      ]
   }
 ]

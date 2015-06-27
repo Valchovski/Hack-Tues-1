@@ -39,7 +39,7 @@
 				<br> 
 				<label>Level</label>
 				<input type="text" class="form-control"
-					ng-model="levels[selectedEntry.level_id - 1].name" readonly>
+					ng-model="levels[selectedEntry.types_id - 1].name" readonly>
 				<br> 
 			</div>
 			<div ng-show="operation == 'new'">
@@ -59,7 +59,7 @@
 					ng-model="selectedEntry.name"> 
 				<br>
 				<label>Level</label> 
-				<select class="form-control" ng-model="newEntry.level_id">
+				<select class="form-control" ng-model="selectedEntry.level_id">
                   <option ng-repeat="level in levels" value="{{level.id}}">{{level.name}}</option>
                 </select>
 				<br>
