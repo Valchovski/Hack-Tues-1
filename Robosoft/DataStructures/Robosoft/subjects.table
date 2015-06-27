@@ -1,0 +1,32 @@
+{
+  "tableName":"SUBJECTS",
+  "columns":
+    [
+      {
+        "name":"ID",
+        "type":"INTEGER",
+        "length":"0",
+        "notNull":"true",
+        "primaryKey":"true",
+        "defaultValue":""
+      }
+      ,
+      {
+        "name":"NAME",
+        "type":"VARCHAR",
+        "length":"50",
+        "notNull":"true",
+        "primaryKey":"false",
+        "defaultValue":""
+      }
+      ,
+      {
+        "name":"LEVEL_ID",
+        "type":"INTEGER",
+        "length":"0",
+        "notNull":"true",
+        "primaryKey":"false",
+        "defaultValue":""
+      }
+    ]
+}

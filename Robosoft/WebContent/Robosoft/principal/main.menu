@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Users Management",
+        "link": "users.html",
+        "subMenu": []
+    },
+    {
+        "name": "Subject Management",
+        "link": "subjects.html",
+        "subMenu": []
+    }
+]
