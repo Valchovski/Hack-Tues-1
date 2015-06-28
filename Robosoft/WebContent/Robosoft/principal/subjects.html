@@ -1,3 +1,9 @@
+<style>
+    .selected-true{
+        background-color:#EEE;
+    }
+</style>
+
 <div id="wrap" ng-app ng-controller="ManageController">
 	<div class="container">
 		<div class="alert alert-danger" ng-show="errorMessage">
@@ -39,7 +45,7 @@
 				<br> 
 				<label>Level</label>
 				<input type="text" class="form-control"
-					ng-model="levels[selectedEntry.types_id - 1].name" readonly>
+					ng-model="levels[selectedEntry.level_id - 1].name" readonly>
 				<br> 
 			</div>
 			<div ng-show="operation == 'new'">

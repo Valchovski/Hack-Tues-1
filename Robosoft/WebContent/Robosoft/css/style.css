@@ -1,0 +1,168 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 0px;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 300px;
+  height: 100px;
+}
+tr {
+	width:300px;
+}
+tbody {
+	border-bottom:1px;
+}
+
+body {
+  font: 12px/20px 'Lucida Grande', Verdana, sans-serif;
+  color: #404040;
+  background: #fff;
+}
+
+.datepicker {
+  position: relative;
+  margin: 60px auto;
+  padding: 4px;
+  font-size: 10px;
+  text-align: center;
+  background: #fff;
+  //border: 1px solid #0e1013;
+  //border-collapse: separate;
+  //border-radius: 4px 4px 3px 3px;
+  //-webkit-box-shadow: 0 1px #181c21, 0 2px #14171b, 0 3px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px #181c21, 0 1px #14171b, 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.datepicker:before, .datepicker:after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -4px;
+  //border: 4px solid transparent;
+  //border-bottom-color: #ccc;
+}
+.datepicker:before {
+  top: -9px;
+  //border-bottom-color: #14171b;
+}
+
+.datepicker-caption {
+  display: block;
+  position: relative;
+  line-height: 29px;
+  background: #eee;
+  border: 1px solid #1b1e24;
+  border-bottom-color: #181b21;
+  border-radius: 3px 3px 0 0;
+  //background-image: -webkit-linear-gradient(top, #428bca, #428bca 50%, #428bca 50%, #428bca);
+  //background-image: -moz-linear-gradient(top, #428bca, #428bca 50%, #428bca 50%, #428bca);
+  background-image: -o-linear-gradient(top, #414b56, #323841 50%, #2b323a 50%, #252a31);
+  //background-image: linear-gradient(to bottom, #414b56, #323841 50%, #2b323a 50%, #252a31);
+  //webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.2);
+  //box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.datepicker-title {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 18px;
+  margin: 4px 0;
+  padding: 0 8px 1px;
+  font-weight: bold;
+  color: #414b56;
+  //text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  background: #eee;
+  //border: 1px solid;
+  border-color: #ccc #ccc #ccc;
+ // border-radius: 2px;
+  webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.08);
+  //box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.datepicker-head {
+  display: block;
+  background: #fff;
+  border: 1px solid #1b1e25;
+  border-width: 0 1px;
+}
+
+.datepicker-th {
+  width: 300px;
+  line-height: 24px;
+  padding-bottom: 1px;
+  font-weight: bold;
+  color: #414b56;
+  border-bottom: 1px solid #232833;
+}
+
+.datepicker-body {
+  display: block;
+  background: #fff;
+  border: 1px solid #1b1e25;
+  border-top: 0;
+  border-bottom: 0px;
+  border-radius: 0 0 0px 0px;
+}
+
+.datepicker-td {
+  width: 300px;
+  line-height: 26px;
+  padding-bottom: 1px;
+  color: #414b56;
+ // text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  border-bottom: 0px solid #323841;
+ // webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
+ // box-shadow: inset 0 0px rgba(255, 255, 255, 0.06);
+}
+.datepicker-td > a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.datepicker-td > a:hover {
+  color: #1dd87e;
+}

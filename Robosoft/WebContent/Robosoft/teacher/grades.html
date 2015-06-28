@@ -1,4 +1,4 @@
-	<div id="wrap" ng-app ng-controller="ManageController">
+	   <div id="wrap" ng-app ng-controller="ManageController">
 		<div class="container">
 			<div class="alert alert-danger" ng-show="errorMessage">
 				{{errorMessage}}</div>
@@ -20,8 +20,8 @@
 				</tbody>
 			</table>-->
 			<ul class="unstyled">
-			    <li ng-repeat="entry in data">
-			        <a href="class.html?class={{entry.id}}">{{entry.grade}} {{entry.speciality}}</a>
+			    <li ng-repeat="entry in data" style="list-style-type:none;">
+			        <a href="class.html?class={{entry.id}}"><button class="btn btn-default">{{entry.grade}} {{entry.speciality}}</button></a>
 			    </li>
 			</ul>
 		</div>

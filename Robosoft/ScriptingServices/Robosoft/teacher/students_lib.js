@@ -32,7 +32,7 @@ exports.createStudents = function() {
         statement.setInt(++i, id);
         statement.setString(++i, message.first_name);
         statement.setString(++i, message.last_name);
-        statement.setInt(++i, message.grade);
+        //statement.setInt(++i, message.grade);
         statement.executeUpdate();
         response.getWriter().println(id);
         return id;

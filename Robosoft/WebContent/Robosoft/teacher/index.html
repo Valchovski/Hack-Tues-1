@@ -28,6 +28,46 @@
   </head>
 
   <body style="height: 100%;">
+<style>
+    
+		td, th{
+			text-align: center;
+			//border: 1px solid black;
+			padding-right:10px;
+			padding-bottom:1%;
+		}
+		.time{
+			text-align: center;
+			width:100px;
+			font-size:1em;
+			padding-left:1%;
+		}
+		tr td {
+			text-align: center;
+			margin-left:1%;
+			margin-right:1%;		
+			padding-bottom:1%;
+		}
+		tr td button {
+			width:100%;
+		}
+		table{
+		    width:300px;
+            height:300px;
+            position:fixed;
+            margin-left:-150px; /* half of width */
+            margin-top:-150px;  /* half of height */
+            top:49%;
+            left:42.5%;
+		}
+		#predmet {
+		    position:fixed;
+		    top:15%;
+		    left:31%;
+		    
+		}
+		
+	</style>
 
     <!-- Wrap all page content here -->
     <div id="wrap" style="min-height: 100%; height: auto; margin: 0 auto -60px; padding: 0 0 60px;">
@@ -44,22 +84,14 @@
             </button>
             <a class="navbar-brand" href="#">Teacher Home</a>
           </div>
-          
-          <div class="collapse navbar-collapse" id="navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul id="main-menu" class="nav navbar-nav">
-              
             </ul>
+            <img src="../tuestranc.png" height="40" width="100" style="float: right; padding-right:0.3%;padding-top:1,2%;">
     
           </div><!--/.nav-collapse -->
       </nav>
 
-	  <div class="jumbotron visible-lg visible-md" >
-		<div class="container">
-    			<div id="sloganHolder">
-					Your slogan here...
-				</div>
-		</div>
-	  </div>
 	  
       <div class="page-header well visible-sm visible-xs">
             <h3 class="page-banner">
@@ -70,9 +102,109 @@
 	  <!-- Begin page content -->
 	  <div class="container" style="padding: 50px 15px 0;">
 		<div id="content" >
-        	<br/><br/>
-            <p class="lead">Your welcome message here...</p>
-            <br/><br/>
+        	<div id="navbar">
+	<div class="btn-group" role="group" aria-label="...">
+    	<div id="predmet">
+    		<a href="#">
+    	 	<button type="button" class="btn btn-default">Geography</button></a>
+    	 	<a href="#">
+    	 	<button type="button" class="btn btn-default">History</button></a>
+    	</div>
+	</div>
+	<div class="btn-group-vertical" role="group" style="float: left; margin-right: 3%; position: fixed; margin-top: 10%; left: 22%;">
+  	<button type="button" class="btn btn-default">Classes</button>	 	<button type="button" class="btn btn-default">Planning</button>
+	 	</div>
+	 	
+	 	<div class="table">
+	<table>
+		<thead>
+			<tr>
+				<th colspan="2">Time</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday  </th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><b>1</b></td>
+				<td class="time">8:00-8:40</td>
+				<td><button type="button" class="btn btn-default">10a</button></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><b>2</b></td>
+				<td class="time">8:50-9:30</td>
+				<td><button type="button" class="btn btn-default">10a</button></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><b>3</b></td>
+				<td class="time">9:40-10:20</td>
+				<td><button type="button" class="btn btn-default">9v</button></td>
+				<td></td>
+				<td></td>
+				<td><button type="button" class="btn btn-default">11v</button></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><b>4</b></td>
+				<td class="time" >10:30-11:10</td>
+				<td><button type="button" class="btn btn-default">9v</button></td>
+				<td></td>
+				<td></td>
+				<td><button type="button" class="btn btn-default">11v</button></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><b>5</b></td>
+				<td class="time">11:20-12:00</td>
+				<td></td>
+				<td><button type="button" class="btn btn-default">10v</button></td>
+				<td><button type="button" class="btn btn-default">9b</button></td>
+				<td></td>
+				<td><button type="button" class="btn btn-default">11a</button></td>
+			</tr>
+			<tr>
+				<td><b>6</b></td>
+				<td class="time">12:10-12:50</td>
+				<td></td>
+				<td><button type="button" class="btn btn-default">10v</button></td>
+				<td><button type="button" class="btn btn-default">9b</button></td>
+				<td></td>
+				<td><button type="button" class="btn btn-default">11a</button></td>
+			</tr>
+			<tr>
+				<td><b>7</b></td>
+				<td class="time">13:00-13:40</td>
+				<td></td>
+				<td></td>
+				<td><button type="button" class="btn btn-default">10g</button></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><b>8</b></td>
+				<td class="time">11:20-12:00</td>
+				<td></td>
+				<td></td>
+				<td><button type="button" class="btn btn-default">10g</button></td>
+				<td></td>
+				<td></td>
+			</tr>			
+		</tbody>
+	</table>
+  </div>
+  <div>
+</div>
 		</div>
 	  </div>
 	 
